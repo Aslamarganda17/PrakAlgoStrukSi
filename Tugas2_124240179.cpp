@@ -3,7 +3,7 @@
 #include <limits>
 using namespace std;
 
-// node untuk linked list ganda
+// Node untuk linked list ganda
 class Node
 {
 public:
@@ -15,7 +15,7 @@ public:
     Node(string j, float h) : judul(j), harga(h), prev(nullptr), next(nullptr) {}
 };
 
-// class linked list ganda
+// Class linked list ganda
 class BukuList
 {
 private:
@@ -23,6 +23,7 @@ private:
 
 public:
     BukuList() : head(nullptr) {}
+
     void tambahBuku(string judul, float harga)
     {
         Node *baru = new Node(judul, harga);
@@ -39,6 +40,7 @@ public:
             baru->prev = temp;
         }
     }
+
     void tampilkanBuku()
     {
         if (!head)
@@ -54,6 +56,7 @@ public:
             temp = temp->next;
         }
     }
+
     void cariBuku(string target)
     {
         Node *temp = head;
@@ -68,6 +71,7 @@ public:
         }
         cout << "Buku dengan judul \"" << target << "\" tidak ditemukan.\n";
     }
+
     void sisipBuku(string judul, float harga, string posisi)
     {
         Node *baru = new Node(judul, harga);
@@ -126,15 +130,16 @@ public:
                 if (temp->next)
                     temp->next->prev = temp->prev;
                 delete temp;
-                cout << "buku berhasil dihapus.\n";
+                cout << "Buku berhasil dihapus.\n";
                 return;
             }
             temp = temp->next;
         }
-        cout << "buku tidak ditemukan.\n";
+        cout << "Buku tidak ditemukan.\n";
     }
-    // destructor
-    BukuList()
+
+    // Destructor
+    ~BukuList()
     {
         Node *temp = head;
         while (temp)
@@ -145,6 +150,7 @@ public:
         }
     }
 };
+
 void inputHarga(float &harga)
 {
     while (!(cin >> harga) || harga < 0)
@@ -155,6 +161,7 @@ void inputHarga(float &harga)
     }
     cin.ignore();
 }
+
 int main()
 {
     BukuList daftarBuku;
@@ -166,13 +173,19 @@ int main()
     {
         cout << "\n=== Menu ===\n";
         cout << "1. Tambahkan Buku\n";
-        cout << "2. Tampilkan Seluruh Data buku\n";
-        cout << "3. cari data buku\n";
-        cout << "4. Sisip buku (Depan, Tengah, Belakang)\n";
-        cout << "5. Hapus buku\n";
+        cout << "2. Tampilkan Seluruh Data Buku\n";
+        cout << "3. Cari Data Buku\n";
+        cout << "4. Sisip Buku (Depan, Tengah, Belakang)\n";
+        cout << "5. Hapus Buku\n";
         cout << "6. Keluar\n";
         cout << "Pilih Menu: ";
-        cin >> menu;
+
+        while (!(cin >> menu))
+        {
+            cout << "Input tidak valid. Masukkan angka: ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cin.ignore();
 
         switch (menu)
@@ -198,9 +211,9 @@ int main()
         case 4:
         {
             string posisi;
-            cout << "Judul buku: ";
+            cout << "Judul Buku: ";
             getline(cin, judul);
-            cout << "Harga buku: ";
+            cout << "Harga Buku: ";
             inputHarga(harga);
             cout << "Posisi (depan / tengah / belakang): ";
             getline(cin, posisi);
