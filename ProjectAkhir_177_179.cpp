@@ -10,3 +10,9 @@ struct Pesanan{
   int estimasiWaktu;
   Pesanan *next;
 };
+
+//pointer untuk menyimpan head dan tail dari linked list kepala ekor
+Pesanan *head = nullptr;
+Pesanan *tail = nullptr;
+
+//
