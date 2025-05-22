@@ -250,3 +250,7 @@ int main()
         cout << " ===============================================" << endl;
         cout << "| [1]. Tambah Pesanan                           |" << endl;
         cout << "| [2]. Proses Pesanan                           |" << endl;
+        cout << "| [3]. Tampilkan Antrian                        |" << endl;
+        cout << "| [4]. Cari Pesanan (Nama Pelanggan)            |" << endl;
+        cout << "| [5]. Cari Pesanan (Nama Makanan)              |" << endl;
+        
