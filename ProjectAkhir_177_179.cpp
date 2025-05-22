@@ -253,4 +253,6 @@ int main()
         cout << "| [3]. Tampilkan Antrian                        |" << endl;
         cout << "| [4]. Cari Pesanan (Nama Pelanggan)            |" << endl;
         cout << "| [5]. Cari Pesanan (Nama Makanan)              |" << endl;
-        
+        cout << "| [6]. Tampilkan Riwayat Pesanan                |" << endl;
+        cout << "| [7]. Urutkan Pesanan (Nama Makanan)           |" << endl;
+        cout << "| [0]. Keluar                                   |" << endl;
