@@ -256,3 +256,7 @@ int main()
         cout << "| [6]. Tampilkan Riwayat Pesanan                |" << endl;
         cout << "| [7]. Urutkan Pesanan (Nama Makanan)           |" << endl;
         cout << "| [0]. Keluar                                   |" << endl;
+        cout << "=================================================" << endl;
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+        switch (pilihan)
