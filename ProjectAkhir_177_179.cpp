@@ -181,8 +181,7 @@ void urutkanPesanan(){
           
 
 // fungsi untuk menampilkan antrian pesanannn
-void tampilkanAntrian()
-{
+void tampilkanAntrian(){
     if (head == nullptr){
         cout << "\nAntrian kosong.\n";
         return;
@@ -201,8 +200,7 @@ void tampilkanAntrian()
 }
 
 // fungsi untuk mencari pesanan berdasarkan nama pelanggan (sequential search)
-void cariPesananNama()
-{
+void cariPesananNama(){
     string cari; // untuk menyimpan input dari user saat user ingin mencari pesanan berdasarkan nama pelanggan
     cout << "\nMasukkan nama pelanggan yang dicari: ";
     cin.ignore();
@@ -213,18 +211,15 @@ void cariPesananNama()
     {
 
 // Fungsi untuk mencari pesanan berdasarkan nama makanan (sequential search)
-void cariPesananMakanan()
-{
+void cariPesananMakanan(){
     string cari; // menyimpan input dari user saat ingin mencari pesanan berdasarkan nama makanan
     cout << "\nMasukkan nama makanan yang dicari: ";
     cin.ignore();
     getline(cin, cari);
     Pesanan *bantu = head;
     bool ditemukan = false;
-    while (bantu != nullptr)
-    {
-        if (bantu->makanan == cari)
-        {
+    while (bantu != nullptr){
+        if (bantu->makanan == cari){
             cout << "Ditemukan pesanan ID: " << bantu->id
                  << " | Nama Pelanggan: " << bantu->namaPelanggan
                  << " | Menu: " << bantu->makanan
@@ -239,11 +234,9 @@ void cariPesananMakanan()
 }
 
 
-int main()
-{
+int main(){
     int pilihan;
-    do
-    {
+    do{
         cout << " ===============================================" << endl;
         cout << "|    MENU SISTEM ANTRIAN PENGANTARAN MAKANAN    |" << endl;
         cout << " ===============================================" << endl;
