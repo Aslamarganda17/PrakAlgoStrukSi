@@ -54,3 +54,17 @@ void tampilkanRiwayat(){
         cout << "Gagal membuka file riwayat pesanan"<<endl;
         return;
     }
+    cout << "\n=== Riwayat Pesanan yang Telah Diproses ===\n";
+    char line[256];
+    while (fgets(line, sizeof(line), f) != NULL){
+        int id, jumlah, estimasi;
+        char nama[50], makanan[50], review[100];
+        // Tambahkan review di parsing
+        sscanf(line, "%d,%49[^,],%49[^,],%d,%d,%99[^\n]", &id, nama, makanan, &jumlah, &estimasi, review);
+
+        cout << "ID: " << id << " | Nama: " << nama << " | Menu: " << makanan
+             << " | Jumlah: " << jumlah << " | Estimasi: " << estimasi << " menit"
+             << " | Review: " << review << endl;
+    }
+    fclose(f);
+}
