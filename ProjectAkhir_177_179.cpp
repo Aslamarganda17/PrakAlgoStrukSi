@@ -46,3 +46,11 @@ void simpanKeRiwayat(Pesanan *pesanan, const string &hasilReview){
     pesanan->makanan.c_str(), pesanan->jumlah, pesanan->estimasiWaktu, hasilReview.c_str());
     fclose(f);   
 }
+
+//Fungsi untuk menampilkan riwayat pesanan
+void tampilkanRiwayat(){
+    FILE *f = fopen("riwayat_pesanan.txt", "r");
+    if (f == NULL){
+        cout << "Gagal membuka file riwayat pesanan"<<endl;
+        return;
+    }
