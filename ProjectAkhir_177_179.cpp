@@ -212,3 +212,16 @@ void cariPesananNama()
     bool ditemukan = false;
     while (bantu != nullptr)
     {
+
+// Fungsi untuk mencari pesanan berdasarkan nama makanan (sequential search)
+void cariPesananMakanan()
+{
+    string cari; // menyimpan input dari user saat ingin mencari pesanan berdasarkan nama makanan
+    cout << "\nMasukkan nama makanan yang dicari: ";
+    cin.ignore();
+    getline(cin, cari);
+    Pesanan *bantu = head;
+    bool ditemukan = false;
+    while (bantu != nullptr)
+    {
+
