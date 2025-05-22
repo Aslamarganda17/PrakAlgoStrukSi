@@ -85,3 +85,16 @@ void tambahPesanan(){
     cout << "Estimasi Waktu (menit): ";
     cin >> baru->estimasiWaktu;
     baru->next = nullptr;
+
+    if (head == nullptr){
+        head = tail = baru;
+    }
+    else{
+        tail->next = baru;
+        tail = baru;
+    }
+    cout << "\nPesanan berhasil ditambahkan ke antrian!\n";
+    
+    // Simpan ke file setelah menambah pesanan
+    simpanKeFile(head); 
+}
