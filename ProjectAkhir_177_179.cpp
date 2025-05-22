@@ -191,3 +191,12 @@ void tampilkanAntrian()
     Pesanan *bantu = head;
     cout << "\nDaftar Antrian:\n";
     while (bantu != nullptr)
+     {
+        cout << "ID: " << bantu->id
+             << " | Nama: " << bantu->namaPelanggan
+             << " | Menu: " << bantu->makanan
+             << " | Jumlah: " << bantu->jumlah
+             << " | Estimasi: " << bantu->estimasiWaktu << " menit\n";
+        bantu = bantu->next;
+    }
+}
