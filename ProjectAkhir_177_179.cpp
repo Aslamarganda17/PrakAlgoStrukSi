@@ -68,3 +68,20 @@ void tampilkanRiwayat(){
     }
     fclose(f);
 }
+
+// Fungsi untuk menambahkan pesanan baru (linked list)
+void tambahPesanan(){
+    cout<<endl;
+    cout << "=== Tambah Pesanan Baru ==="<<endl;
+    Pesanan *baru = new Pesanan;
+    baru->id = nextId++;
+    cout << "Nama Pelanggan   : ";
+    cin.ignore();
+    getline(cin, baru->namaPelanggan);
+    cout << "Menu Makanan     : ";
+    getline(cin, baru->makanan);
+    cout << "Jumlah Pesanan   : ";
+    cin >> baru->jumlah;
+    cout << "Estimasi Waktu (menit): ";
+    cin >> baru->estimasiWaktu;
+    baru->next = nullptr;
