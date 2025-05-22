@@ -267,3 +267,9 @@ int main()
         case 1:
             tambahPesanan();
             break;
+        case 2:
+            prosesPesanan();
+            break;
+        case 3:
+            tampilkanAntrian();
+            break;
