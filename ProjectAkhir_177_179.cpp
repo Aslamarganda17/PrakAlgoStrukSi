@@ -224,4 +224,13 @@ void cariPesananMakanan()
     bool ditemukan = false;
     while (bantu != nullptr)
     {
+        if (bantu->makanan == cari)
+        {
+            cout << "Ditemukan pesanan ID: " << bantu->id
+                 << " | Nama Pelanggan: " << bantu->namaPelanggan
+                 << " | Menu: " << bantu->makanan
+                 << " | Jumlah: " << bantu->jumlah
+                 << " | Estimasi: " << bantu->estimasiWaktu << " menit\n";
+            ditemukan = true;
+        }
 
