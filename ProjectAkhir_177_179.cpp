@@ -273,3 +273,23 @@ int main()
         case 3:
             tampilkanAntrian();
             break;
+        case 4:
+            cariPesananNama();
+            break;
+        case 5:
+            cariPesananMakanan();
+            break;
+        case 6:
+            tampilkanRiwayat();
+            break;
+        case 7:
+            urutkanPesanan();
+            cout << "\nPesanan berhasil diurutkan berdasarkan nama makanan!\n";
+            tampilkanAntrian();
+            break;
+        default:
+            cout << "\nPilihan tidak valid.\n";
+        }
+    } while (pilihan != 7);
+    return 0;
+}
