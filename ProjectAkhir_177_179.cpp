@@ -179,3 +179,15 @@ void urutkanPesanan(){
     }
 }
           
+
+// fungsi untuk menampilkan antrian pesanannn
+void tampilkanAntrian()
+{
+    if (head == nullptr)
+    {
+        cout << "\nAntrian kosong.\n";
+        return;
+    }
+    Pesanan *bantu = head;
+    cout << "\nDaftar Antrian:\n";
+    while (bantu != nullptr)
