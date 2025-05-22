@@ -233,4 +233,9 @@ void cariPesananMakanan()
                  << " | Estimasi: " << bantu->estimasiWaktu << " menit\n";
             ditemukan = true;
         }
+     bantu = bantu->next;
+    }
+    if (!ditemukan)
+        cout << "Tidak ditemukan pesanan dengan nama makanan tersebut.\n";
+}
 
