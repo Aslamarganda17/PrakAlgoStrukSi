@@ -28,9 +28,21 @@ void simpanKeFile(Pesanan *head){
   }
 
   Pesanan *bantu = head;
-  while (bantu != nullptr){
-      fprintf(f, "%d,%s,%s,%d,%d\n", bantu->id, bantu->namaPelanggan.c_str(), bantu->makanan.c_str(), bantu->estimasiWaktu);
-      bantu = bantu->next;
-  }
-  fclose(f);
+    while (bantu != nullptr){
+        fprintf(f, "%d,%s,%s,%d,%d\n", bantu->id, bantu->namaPelanggan.c_str(), bantu->makanan.c_str(), bantu->jumlah, bantu->estimasiWaktu);
+        bantu = bantu->next;
+    }
+    fclose(f);
+}
+
+//Fungsi untuk menyimpan data pesanan yang sudah diproses ke file riwayat_pesanan.txt
+void simpanKeRiwayat(Pesanan *pesanan, const string &hasilReview){
+    FILE *f = fopen("riwayat_pesanan.txt", "a");
+    if (f == NULL){
+        cout << "Gagal membuka file untuk menyimpan riwayat pesanan"<<endl;
+        return;
+    }
+    fprintf(f, "%d,%s,%s,%d,%d,%s\n", pesanan->id, pesanan->namaPelanggan.c_str(), 
+    pesanan->makanan.c_str(), pesanan->jumlah, pesanan->estimasiWaktu, hasilReview.c_str());
+    fclose(f);   
 }
