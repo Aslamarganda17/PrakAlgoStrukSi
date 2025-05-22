@@ -260,3 +260,10 @@ int main()
         cout << "Pilih menu: ";
         cin >> pilihan;
         switch (pilihan)
+        {
+        case 0:
+            cout << "\nTerima kasih telah menggunakan layanan kami.\n";
+            break;
+        case 1:
+            tambahPesanan();
+            break;
