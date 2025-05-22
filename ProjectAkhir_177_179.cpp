@@ -245,4 +245,6 @@ int main()
     int pilihan;
     do
     {
-
+        cout << " ===============================================" << endl;
+        cout << "|    MENU SISTEM ANTRIAN PENGANTARAN MAKANAN    |" << endl;
+        cout << " ===============================================" << endl;
