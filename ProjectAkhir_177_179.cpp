@@ -248,3 +248,5 @@ int main()
         cout << " ===============================================" << endl;
         cout << "|    MENU SISTEM ANTRIAN PENGANTARAN MAKANAN    |" << endl;
         cout << " ===============================================" << endl;
+        cout << "| [1]. Tambah Pesanan                           |" << endl;
+        cout << "| [2]. Proses Pesanan                           |" << endl;
