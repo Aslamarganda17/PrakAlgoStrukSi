@@ -266,8 +266,8 @@ int main()
         cout << "| [3]. Tampilkan Antrian                        |" << endl;
         cout << "| [4]. Cari Pesanan (Nama Pelanggan)            |" << endl;
         cout << "| [5]. Cari Pesanan (Nama Makanan)              |" << endl;
-        cout << "| [6]. Tampilkan Riwayat Pesanan                |" << endl;
-        cout << "| [7]. Urutkan Pesanan (Nama Makanan)           |" << endl;
+        cout << "| [6]. Urutkan Pesanan (Nama Makanan)           |" << endl;
+        cout << "| [7]. Tampilkan Riwayat Pesanan                |" << endl;
         cout << "| [0]. Keluar                                   |" << endl;
         cout << "=================================================" << endl;
         cout << "Pilih menu: ";
@@ -293,12 +293,12 @@ int main()
             cariPesananMakanan();
             break;
         case 6:
-            tampilkanRiwayat();
-            break;
-        case 7:
             urutkanPesanan();
             cout << "\nPesanan berhasil diurutkan berdasarkan nama makanan!\n";
             tampilkanAntrian();
+            break;
+        case 7:
+            tampilkanRiwayat();
             break;
         default:
             cout << "\nPilihan tidak valid.\n";
